@@ -1,0 +1,349 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>mainWindow</class>
+ <widget class="QWidget" name="mainWindow">
+  <property name="enabled">
+   <bool>true</bool>
+  </property>
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1600</width>
+    <height>900</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>EMATS v0.2</string>
+  </property>
+  <layout class="QGridLayout" name="gridLayout_8">
+   <item row="2" column="0">
+    <widget class="QGroupBox" name="groupBox">
+     <property name="minimumSize">
+      <size>
+       <width>400</width>
+       <height>0</height>
+      </size>
+     </property>
+     <property name="title">
+      <string>Load Videos</string>
+     </property>
+     <layout class="QGridLayout" name="gridLayout">
+      <item row="1" column="0">
+       <widget class="QPushButton" name="loadVideosButton">
+        <property name="text">
+         <string>Load Videos</string>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="0" colspan="2">
+       <widget class="QPushButton" name="setWorkingDirectoryButton">
+        <property name="text">
+         <string>Set Working Directory</string>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="0">
+       <widget class="QLabel" name="label">
+        <property name="text">
+         <string>Mouse IDs (one per line)</string>
+        </property>
+       </widget>
+      </item>
+      <item row="3" column="0">
+       <widget class="QPlainTextEdit" name="mouseIDsTextEdit"/>
+      </item>
+      <item row="4" column="0">
+       <widget class="QPushButton" name="confirmMiceButton">
+        <property name="text">
+         <string>Confirm Mouse IDs</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item row="1" column="0" colspan="2">
+    <widget class="QLabel" name="authorLabel">
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="Ignored" vsizetype="Fixed">
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>10</pointsize>
+       <weight>75</weight>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="text">
+      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;Dickson Wong, Robarts Research Institute, 2016&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+     </property>
+    </widget>
+   </item>
+   <item row="0" column="0" colspan="2">
+    <widget class="QLabel" name="titleLabel">
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="Ignored" vsizetype="Fixed">
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>12</pointsize>
+       <weight>75</weight>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="text">
+      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;Elevated Plus Maze Automatic Tracking Software (EMATS) v0.2&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+     </property>
+    </widget>
+   </item>
+   <item row="3" column="0">
+    <widget class="QGroupBox" name="groupBox_2">
+     <property name="title">
+      <string>Video Analysis Parameters</string>
+     </property>
+     <layout class="QGridLayout" name="gridLayout_2">
+      <item row="0" column="0">
+       <widget class="QLabel" name="BLUR_KERNEL_WIDTH_label">
+        <property name="text">
+         <string>BLUR_KERNEL_WIDTH</string>
+        </property>
+       </widget>
+      </item>
+      <item row="4" column="1">
+       <spacer name="verticalSpacer_2">
+        <property name="orientation">
+         <enum>Qt::Vertical</enum>
+        </property>
+        <property name="sizeType">
+         <enum>QSizePolicy::Fixed</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>20</width>
+          <height>5</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+      <item row="1" column="2">
+       <widget class="QLabel" name="DILATE_KERNEL_HEIGHT_label">
+        <property name="text">
+         <string>DILATE_KERNEL_HEIGHT</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="3">
+       <widget class="QLineEdit" name="DILATE_KERNEL_HEIGHT_lineEdit">
+        <property name="text">
+         <string>7</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="0">
+       <widget class="QLabel" name="BLUR_KERNEL_HEIGHT_label">
+        <property name="text">
+         <string>BLUR_KERNEL_HEIGHT</string>
+        </property>
+       </widget>
+      </item>
+      <item row="9" column="0">
+       <widget class="QRadioButton" name="westRadioButton">
+        <property name="text">
+         <string>West</string>
+        </property>
+        <attribute name="buttonGroup">
+         <string notr="true">CLOSED_ARM_LOCATION_buttonGroup</string>
+        </attribute>
+       </widget>
+      </item>
+      <item row="0" column="1">
+       <widget class="QLineEdit" name="BLUR_KERNEL_WIDTH_lineEdit">
+        <property name="text">
+         <string>5</string>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="2">
+       <widget class="QLabel" name="DILATE_KERNEL_WIDTH_label">
+        <property name="text">
+         <string>DILATE_KERNEL_WIDTH</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="1">
+       <widget class="QLineEdit" name="BLUR_KERNEL_HEIGHT_lineEdit">
+        <property name="text">
+         <string>5</string>
+        </property>
+       </widget>
+      </item>
+      <item row="10" column="1">
+       <widget class="QRadioButton" name="southRadioButton">
+        <property name="text">
+         <string>South</string>
+        </property>
+        <attribute name="buttonGroup">
+         <string notr="true">CLOSED_ARM_LOCATION_buttonGroup</string>
+        </attribute>
+       </widget>
+      </item>
+      <item row="0" column="3">
+       <widget class="QLineEdit" name="DILATE_KERNEL_WIDTH_lineEdit">
+        <property name="text">
+         <string>7</string>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="1">
+       <spacer name="verticalSpacer">
+        <property name="orientation">
+         <enum>Qt::Vertical</enum>
+        </property>
+        <property name="sizeType">
+         <enum>QSizePolicy::Fixed</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>20</width>
+          <height>10</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+      <item row="3" column="1">
+       <widget class="QLabel" name="CLOSED_ARM_LOCATION_label">
+        <property name="text">
+         <string>CLOSED_ARM_LOCATION</string>
+        </property>
+       </widget>
+      </item>
+      <item row="7" column="1">
+       <widget class="QRadioButton" name="northRadioButton">
+        <property name="text">
+         <string>&amp;North</string>
+        </property>
+        <property name="checked">
+         <bool>true</bool>
+        </property>
+        <attribute name="buttonGroup">
+         <string notr="true">CLOSED_ARM_LOCATION_buttonGroup</string>
+        </attribute>
+       </widget>
+      </item>
+      <item row="9" column="2">
+       <widget class="QRadioButton" name="eastRadioButton">
+        <property name="text">
+         <string>East</string>
+        </property>
+        <attribute name="buttonGroup">
+         <string notr="true">CLOSED_ARM_LOCATION_buttonGroup</string>
+        </attribute>
+       </widget>
+      </item>
+      <item row="11" column="0" colspan="4">
+       <widget class="QPushButton" name="confirmParametersButton">
+        <property name="text">
+         <string>Confirm Video Analysis Parameters</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item row="4" column="0">
+    <widget class="QPushButton" name="runVideoAnalysisButton">
+     <property name="text">
+      <string>Run Video Analysis</string>
+     </property>
+    </widget>
+   </item>
+   <item row="5" column="0">
+    <widget class="QGroupBox" name="groupBox_3">
+     <property name="title">
+      <string>Analysis Progress</string>
+     </property>
+     <layout class="QGridLayout" name="gridLayout_3">
+      <item row="1" column="1">
+       <widget class="QProgressBar" name="currentPoolProgressBar">
+        <property name="value">
+         <number>0</number>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="0">
+       <widget class="QLabel" name="currentPoolProgressBar_label">
+        <property name="text">
+         <string>Current Pool</string>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="0">
+       <widget class="QLabel" name="overallProgressBar_label">
+        <property name="text">
+         <string>Overall Progress</string>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="1">
+       <widget class="QProgressBar" name="overallProgressBar">
+        <property name="value">
+         <number>0</number>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item row="2" column="1" rowspan="4">
+    <widget class="QGroupBox" name="groupBox_4">
+     <property name="title">
+      <string>Console Output</string>
+     </property>
+     <layout class="QVBoxLayout" name="verticalLayout_2">
+      <item>
+       <widget class="QTextBrowser" name="consoleOutputText">
+        <property name="font">
+         <font>
+          <family>Monospace</family>
+         </font>
+        </property>
+        <property name="lineWrapMode">
+         <enum>QTextEdit::NoWrap</enum>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <tabstops>
+  <tabstop>setWorkingDirectoryButton</tabstop>
+  <tabstop>loadVideosButton</tabstop>
+  <tabstop>mouseIDsTextEdit</tabstop>
+  <tabstop>confirmMiceButton</tabstop>
+  <tabstop>BLUR_KERNEL_WIDTH_lineEdit</tabstop>
+  <tabstop>BLUR_KERNEL_HEIGHT_lineEdit</tabstop>
+  <tabstop>DILATE_KERNEL_WIDTH_lineEdit</tabstop>
+  <tabstop>DILATE_KERNEL_HEIGHT_lineEdit</tabstop>
+  <tabstop>northRadioButton</tabstop>
+  <tabstop>westRadioButton</tabstop>
+  <tabstop>eastRadioButton</tabstop>
+  <tabstop>southRadioButton</tabstop>
+  <tabstop>confirmParametersButton</tabstop>
+  <tabstop>runVideoAnalysisButton</tabstop>
+  <tabstop>consoleOutputText</tabstop>
+ </tabstops>
+ <resources/>
+ <connections/>
+ <buttongroups>
+  <buttongroup name="CLOSED_ARM_LOCATION_buttonGroup"/>
+ </buttongroups>
+</ui>
