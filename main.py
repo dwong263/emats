@@ -149,6 +149,8 @@ class videoAnalysis(QtCore.QObject):
 			frame_count = 0
 
 			# open video
+			test = open(str(self.mouse.video_infile), 'r')
+			test.close()
 			cap = cv2.VideoCapture(str(self.mouse.video_infile))
 
 			# get video information
@@ -497,7 +499,7 @@ class MyApp(QtWidgets.QWidget, Ui_MainWindow):
 			mouse = Mouse()
 			mouse.id = ID
 			mouse.video_infile = self.videoList[i]
-			mouse.video_outfile = 'results/' + mouse.id + '_tracked.avi'
+			mouse.video_outfile = self.incrementFilename('results/' + mouse.id + '_tracked', 0, 'avi')
 
 			# create a new thread to analyse video
 			analysis_thread = QtCore.QThread()
